@@ -19,7 +19,4 @@ Each question follows this structure:
   "answerIndex": 1,
   "explanation": "Explanation shown after answering."
 }
-## Features
-- Includes 20+ DevOps questions across 4+ topics
-- Question format documented in README
-- Questions stored in data/questions.json
+
