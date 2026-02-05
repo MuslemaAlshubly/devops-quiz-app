@@ -22,3 +22,8 @@ Each question follows this structure:
 ## Features
 - question bank with 20 questions
 - 4 topics included
+- Topic selection dropdown (UI)
+- Loads questions from JSON using fetch()
+- Shows one question at a time
+- Submit button checks the selected answer
+- Displays feedback and explanation
