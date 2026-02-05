@@ -129,5 +129,137 @@
     ],
     "answerIndex": 0,
     "explanation": "Conflicts occur when Git cannot automatically combine changes."
+  },
+
+  {
+    "id": "Q11",
+    "topic": "Continuous Delivery",
+    "question": "What is Continuous Delivery (CD) mainly about?",
+    "options": [
+      "Keeping software always ready to release",
+      "Never testing before release",
+      "Only deploying once per year",
+      "Avoiding automation"
+    ],
+    "answerIndex": 0,
+    "explanation": "Continuous Delivery ensures software is always in a releasable state."
+  },
+  {
+    "id": "Q12",
+    "topic": "Continuous Delivery",
+    "question": "How does Continuous Deployment differ from Continuous Delivery?",
+    "options": [
+      "Deployment is always manual in Continuous Deployment",
+      "Continuous Deployment automatically releases to production",
+      "Continuous Delivery never uses tests",
+      "They are identical terms"
+    ],
+    "answerIndex": 1,
+    "explanation": "Continuous Deployment automatically deploys to production after passing checks."
+  },
+  {
+    "id": "Q13",
+    "topic": "Continuous Delivery",
+    "question": "Which is a typical stage after build in a delivery pipeline?",
+    "options": [
+      "Automated testing and staging deployment",
+      "Printing the code on paper",
+      "Deleting source files",
+      "Turning off version control"
+    ],
+    "answerIndex": 0,
+    "explanation": "Pipelines commonly run tests and deploy to staging before release."
+  },
+  {
+    "id": "Q14",
+    "topic": "Continuous Delivery",
+    "question": "Why use staging environments?",
+    "options": [
+      "To experiment safely before production",
+      "To avoid any testing",
+      "To hide bugs permanently",
+      "To stop deployments"
+    ],
+    "answerIndex": 0,
+    "explanation": "Staging helps validate changes in a production-like environment."
+  },
+  {
+    "id": "Q15",
+    "topic": "Continuous Delivery",
+    "question": "What is a release candidate?",
+    "options": [
+      "A version considered ready for release pending final checks",
+      "A rejected version with no tests",
+      "A random commit with no purpose",
+      "A backup of the repository"
+    ],
+    "answerIndex": 0,
+    "explanation": "A release candidate is a build that may become the final release."
+  },
+
+  {
+    "id": "Q16",
+    "topic": "DevOps Culture",
+    "question": "What is a key idea of DevOps culture?",
+    "options": [
+      "Collaboration between development and operations",
+      "Separating teams to avoid communication",
+      "No automation at all",
+      "Only writing documentation"
+    ],
+    "answerIndex": 0,
+    "explanation": "DevOps emphasizes collaboration, shared responsibility, and faster delivery."
+  },
+  {
+    "id": "Q17",
+    "topic": "DevOps Culture",
+    "question": "What does 'shift left' usually mean?",
+    "options": [
+      "Move tasks later in the project",
+      "Do testing and security earlier in the lifecycle",
+      "Ignore code review until release",
+      "Deploy before writing code"
+    ],
+    "answerIndex": 1,
+    "explanation": "Shift left means addressing quality and security earlier."
+  },
+  {
+    "id": "Q18",
+    "topic": "DevOps Culture",
+    "question": "Which metric often reflects DevOps performance?",
+    "options": [
+      "Deployment frequency",
+      "Number of office chairs",
+      "Time spent on social media",
+      "Computer screen size"
+    ],
+    "answerIndex": 0,
+    "explanation": "Deployment frequency is a common delivery performance indicator."
+  },
+  {
+    "id": "Q19",
+    "topic": "DevOps Culture",
+    "question": "Why are post-incident reviews useful?",
+    "options": [
+      "To blame individuals",
+      "To learn and improve systems and processes",
+      "To stop all deployments permanently",
+      "To hide errors from the team"
+    ],
+    "answerIndex": 1,
+    "explanation": "Good reviews focus on learning, not blame, and improve reliability."
+  },
+  {
+    "id": "Q20",
+    "topic": "DevOps Culture",
+    "question": "What does 'continuous improvement' suggest?",
+    "options": [
+      "Never change anything",
+      "Regularly refine processes based on feedback",
+      "Only improve once at the end",
+      "Remove all monitoring"
+    ],
+    "answerIndex": 1,
+    "explanation": "Continuous improvement means iterating based on results and feedback."
   }
 ]
