@@ -10,283 +10,256 @@
       "Avoid using version control"
     ],
     "answerIndex": 1,
-    "explanation": "CI focuses on integrating changes often to detect issues early."
+    "explanation": "CI integrates changes often so problems are found early."
   },
   {
     "id": "Q2",
     "topic": "Continuous Integration",
     "question": "Which practice best supports CI?",
     "options": [
-      "Long-lived feature branches without merges",
+      "Long-lived branches without merges",
       "Frequent small commits with automated builds",
       "Only testing at the end of the sprint",
-      "Manually copying code to servers"
+      "Manual copying code to servers"
     ],
     "answerIndex": 1,
-    "explanation": "Small, frequent commits plus automated builds/tests support CI."
+    "explanation": "Small frequent commits plus automation supports CI."
   },
   {
     "id": "Q3",
     "topic": "Continuous Integration",
     "question": "What is a common output of a CI pipeline?",
     "options": [
-      "A compiled build artifact",
-      "A company budget report",
-      "A production database backup only",
-      "A random password list"
+      "A build artifact",
+      "A meeting agenda",
+      "A social media post",
+      "A company payroll file"
     ],
     "answerIndex": 0,
-    "explanation": "CI often produces build artifacts after compiling and testing."
+    "explanation": "CI pipelines often produce build artifacts after building/testing."
   },
   {
     "id": "Q4",
     "topic": "Continuous Integration",
     "question": "Why are automated tests important in CI?",
     "options": [
-      "They replace all documentation",
-      "They help detect regressions quickly",
+      "They replace documentation",
+      "They detect regressions quickly",
       "They guarantee zero bugs forever",
-      "They remove the need for code review"
+      "They remove the need for review"
     ],
     "answerIndex": 1,
-    "explanation": "Automated tests catch regressions early when code changes are integrated."
+    "explanation": "Automated tests quickly detect regressions after changes."
   },
   {
     "id": "Q5",
     "topic": "Continuous Integration",
-    "question": "Which tool category is most associated with CI?",
+    "question": "What should developers do when a CI build fails?",
     "options": [
-      "CI server / pipeline runner",
-      "Spreadsheet editor",
-      "Video streaming platform",
-      "Photo filter app"
+      "Ignore it until release day",
+      "Fix it quickly and restore the pipeline",
+      "Delete the tests",
+      "Stop using version control"
     ],
-    "answerIndex": 0,
-    "explanation": "CI is commonly implemented using a CI server/pipeline runner."
+    "answerIndex": 1,
+    "explanation": "Fixing failures quickly keeps the main branch healthy."
   },
 
   {
     "id": "Q6",
     "topic": "Version Control Systems",
-    "question": "What is the main benefit of using Git in a team?",
+    "question": "What is the main purpose of version control?",
     "options": [
-      "It replaces the need for any communication",
-      "It tracks changes and supports collaboration",
-      "It automatically writes code for you",
-      "It prevents any merge conflicts from happening"
+      "Track and manage changes to files over time",
+      "Run the application faster",
+      "Replace the need for teamwork",
+      "Encrypt all code automatically"
     ],
-    "answerIndex": 1,
-    "explanation": "Git tracks history and enables teamwork through branches and merges."
+    "answerIndex": 0,
+    "explanation": "Version control tracks changes and supports collaboration."
   },
   {
     "id": "Q7",
     "topic": "Version Control Systems",
-    "question": "What does a branch represent in Git?",
+    "question": "What does a Git branch represent?",
     "options": [
       "A separate line of development",
-      "A final release only",
-      "A password for the repository",
-      "A deleted version of the project"
+      "A deleted copy of the project",
+      "A password for the repo",
+      "A required file type"
     ],
     "answerIndex": 0,
-    "explanation": "A branch lets you develop features independently from main."
+    "explanation": "Branches allow independent work without affecting main."
   },
   {
     "id": "Q8",
     "topic": "Version Control Systems",
     "question": "What is the purpose of a Pull Request (PR)?",
     "options": [
-      "To delete the main branch",
-      "To propose changes for review and merging",
-      "To prevent anyone from cloning",
-      "To rename all files automatically"
+      "Propose changes for review before merging",
+      "Delete the main branch",
+      "Prevent cloning",
+      "Automatically fix all bugs"
     ],
-    "answerIndex": 1,
-    "explanation": "A PR is used to review changes before merging into main."
+    "answerIndex": 0,
+    "explanation": "PRs enable review and discussion before merging changes."
   },
   {
     "id": "Q9",
     "topic": "Version Control Systems",
-    "question": "Which command gets the latest changes from remote and merges them locally?",
+    "question": "Which command downloads and merges changes from a remote repo?",
     "options": [
       "git pull",
       "git push",
       "git init",
-      "git status"
+      "git branch"
     ],
     "answerIndex": 0,
-    "explanation": "git pull fetches from remote and merges into your current branch."
+    "explanation": "git pull fetches and merges changes into your branch."
   },
   {
     "id": "Q10",
     "topic": "Version Control Systems",
     "question": "What usually causes a merge conflict?",
     "options": [
+      "Two changes in different files",
       "Two people edit the same lines differently",
-      "No one commits anything",
-      "You only read files",
-      "Your computer is too fast"
+      "No one commits",
+      "Using only one branch"
     ],
-    "answerIndex": 0,
-    "explanation": "Conflicts occur when Git cannot automatically combine changes."
+    "answerIndex": 1,
+    "explanation": "Conflicts happen when Git can’t auto-merge the same lines."
   },
 
   {
     "id": "Q11",
     "topic": "Continuous Delivery",
-    "question": "What is Continuous Delivery (CD) mainly about?",
+    "question": "What is Continuous Delivery mainly about?",
     "options": [
       "Keeping software always ready to release",
       "Never testing before release",
-      "Only deploying once per year",
+      "Deploying only once per year",
       "Avoiding automation"
     ],
     "answerIndex": 0,
-    "explanation": "Continuous Delivery ensures software is always in a releasable state."
+    "explanation": "Continuous Delivery keeps the product releasable at any time."
   },
   {
     "id": "Q12",
     "topic": "Continuous Delivery",
-    "question": "How does Continuous Deployment differ from Continuous Delivery?",
+    "question": "How is Continuous Deployment different from Continuous Delivery?",
     "options": [
-      "Deployment is always manual in Continuous Deployment",
       "Continuous Deployment automatically releases to production",
-      "Continuous Delivery never uses tests",
-      "They are identical terms"
+      "Continuous Delivery always deploys to production automatically",
+      "Continuous Deployment never uses tests",
+      "They are the same thing"
     ],
-    "answerIndex": 1,
-    "explanation": "Continuous Deployment automatically deploys to production after passing checks."
+    "answerIndex": 0,
+    "explanation": "Continuous Deployment automatically deploys to production after checks."
   },
   {
     "id": "Q13",
     "topic": "Continuous Delivery",
-    "question": "Which is a typical stage after build in a delivery pipeline?",
+    "question": "Why use a staging environment?",
     "options": [
-      "Automated testing and staging deployment",
-      "Printing the code on paper",
-      "Deleting source files",
-      "Turning off version control"
+      "To test changes in a production-like environment",
+      "To avoid testing",
+      "To increase merge conflicts",
+      "To remove code review"
     ],
     "answerIndex": 0,
-    "explanation": "Pipelines commonly run tests and deploy to staging before release."
+    "explanation": "Staging validates behavior before production release."
   },
   {
     "id": "Q14",
     "topic": "Continuous Delivery",
-    "question": "Why use staging environments?",
+    "question": "What is a release pipeline?",
     "options": [
-      "To experiment safely before production",
-      "To avoid any testing",
-      "To hide bugs permanently",
-      "To stop deployments"
+      "A series of automated steps from build to release",
+      "A way to write code faster without tests",
+      "A Git command",
+      "A database backup strategy only"
     ],
     "answerIndex": 0,
-    "explanation": "Staging helps validate changes in a production-like environment."
+    "explanation": "Pipelines automate building, testing, and preparing releases."
   },
   {
     "id": "Q15",
     "topic": "Continuous Delivery",
-    "question": "What is a release candidate?",
+    "question": "What is a common benefit of CD?",
     "options": [
-      "A version considered ready for release pending final checks",
-      "A rejected version with no tests",
-      "A random commit with no purpose",
-      "A backup of the repository"
+      "Faster and safer releases",
+      "More manual deployment steps",
+      "Less visibility into changes",
+      "No need for version control"
     ],
     "answerIndex": 0,
-    "explanation": "A release candidate is a build that may become the final release."
+    "explanation": "CD reduces risk through automation and frequent releases."
   },
 
   {
     "id": "Q16",
     "topic": "DevOps Culture",
-    "question": "What is a key idea of DevOps culture?",
+    "question": "What is a key principle of DevOps culture?",
     "options": [
-      "Collaboration between development and operations",
+      "Collaboration between Dev and Ops",
       "Separating teams to avoid communication",
-      "No automation at all",
+      "No automation allowed",
       "Only writing documentation"
     ],
     "answerIndex": 0,
-    "explanation": "DevOps emphasizes collaboration, shared responsibility, and faster delivery."
+    "explanation": "DevOps promotes shared responsibility and collaboration."
   },
   {
     "id": "Q17",
     "topic": "DevOps Culture",
     "question": "What does 'shift left' usually mean?",
     "options": [
-      "Move tasks later in the project",
-      "Do testing and security earlier in the lifecycle",
-      "Ignore code review until release",
-      "Deploy before writing code"
+      "Do testing/security earlier in the lifecycle",
+      "Deploy before coding",
+      "Ignore code review",
+      "Move tasks later in the project"
     ],
-    "answerIndex": 1,
+    "answerIndex": 0,
     "explanation": "Shift left means addressing quality and security earlier."
   },
   {
     "id": "Q18",
     "topic": "DevOps Culture",
-    "question": "Which metric often reflects DevOps performance?",
+    "question": "Which is a common DevOps performance metric?",
     "options": [
       "Deployment frequency",
       "Number of office chairs",
-      "Time spent on social media",
-      "Computer screen size"
+      "Monitor size",
+      "Laptop brand"
     ],
     "answerIndex": 0,
-    "explanation": "Deployment frequency is a common delivery performance indicator."
+    "explanation": "Deployment frequency is often used to measure delivery speed."
   },
   {
     "id": "Q19",
     "topic": "DevOps Culture",
-    "question": "Why are post-incident reviews useful?",
+    "question": "Why are blameless post-incident reviews useful?",
     "options": [
+      "To learn and improve systems/processes",
       "To blame individuals",
-      "To learn and improve systems and processes",
-      "To stop all deployments permanently",
-      "To hide errors from the team"
+      "To hide problems",
+      "To stop deployments"
     ],
-    "answerIndex": 1,
-    "explanation": "Good reviews focus on learning, not blame, and improve reliability."
+    "answerIndex": 0,
+    "explanation": "They focus on learning and improving reliability."
   },
   {
     "id": "Q20",
     "topic": "DevOps Culture",
-    "question": "What does 'continuous improvement' suggest?",
+    "question": "What does continuous improvement mean in DevOps?",
     "options": [
-      "Never change anything",
       "Regularly refine processes based on feedback",
-      "Only improve once at the end",
-      "Remove all monitoring"
-    ],
-    "answerIndex": 1,
-    "explanation": "Continuous improvement means iterating based on results and feedback."
-  }
-,{
-  "id": "Q1",
-  "topic": "Continuous Integration",
-  "question": "What is the primary goal of Continuous Integration?",
-  "options": [
-    "Automatically deploy to production",
-    "Frequently integrate code changes into a shared repository",
-    "Eliminate the need for testing",
-    "Remove the need for branches"
-  ],
-  "answerIndex": 1,
-  "explanation": "Continuous Integration aims to detect integration issues early."
-},
-{
-    "id": "Q2",
-    "topic": "Continuous Integration",
-    "question": "Which of the following is a common tool used for Continuous Integration?",
-    "options": [
-        "GitHub Actions",
-        "Docker",
-        "Kubernetes",
-        "Terraform"
+      "Never change anything",
+      "Improve only once at the end",
+      "Remove monitoring"
     ],
     "answerIndex": 0,
-    "explanation": "GitHub Actions is a popular CI tool that allows you to automate workflows."
-
-}
+    "explanation": "Continuous improvement means iterating based on results."
+  }
 ]

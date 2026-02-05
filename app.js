@@ -1,12 +1,3 @@
-// DevOps Quiz App (static)
-// - Loads questions using fetch (data/questions.json)
-// - Topic selection
-// - Shows question + options
-// - Checks answers
-// - Shows feedback + explanation
-
-
-// this is a comment!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 let allQuestions = [];
 let filteredQuestions = [];
 let currentIndex = 0;
@@ -16,8 +7,8 @@ let hasSubmitted = false;
 const topicSelect = document.getElementById("topicSelect");
 const startBtn = document.getElementById("startBtn");
 const nextBtn = document.getElementById("nextBtn");
-const submitBtn = document.getElementById("submitBtn");
 const resetBtn = document.getElementById("resetBtn");
+const submitBtn = document.getElementById("submitBtn");
 
 const statusEl = document.getElementById("status");
 const questionCard = document.getElementById("questionCard");
@@ -38,36 +29,34 @@ function init() {
 function wireEvents() {
   startBtn.addEventListener("click", startQuiz);
   nextBtn.addEventListener("click", nextQuestion);
-  submitBtn.addEventListener("click", submitAnswer);
   resetBtn.addEventListener("click", resetQuiz);
+  submitBtn.addEventListener("click", submitAnswer);
 
   topicSelect.addEventListener("change", () => {
     currentTopic = topicSelect.value;
     statusEl.textContent = currentTopic
       ? `Topic selected: ${currentTopic}. Press Start.`
-      : "Pick a topic and press Start.";
+      : "Select a topic to begin.";
   });
 }
 
 async function loadQuestions() {
   try {
-    statusEl.textContent = "Loading questions...";
+    statusEl.textContent = "Loading questions…";
+
     const res = await fetch("data/questions.json");
-    if (!res.ok) throw new Error("Failed to load questions.json");
+    if (!res.ok) throw new Error("Could not load data/questions.json");
 
     const data = await res.json();
-    allQuestions = Array.isArray(data) ? data : [];
+    if (!Array.isArray(data)) throw new Error("questions.json must be an array");
 
+    allQuestions = data;
     populateTopics(allQuestions);
 
-    statusEl.textContent = "Choose a topic, then press Start.";
-    submitBtn.disabled = true;
-    nextBtn.disabled = true;
+    statusEl.textContent = "Select a topic to begin.";
   } catch (err) {
-    topicSelect.innerHTML = `<option value="">(Error loading topics)</option>`;
     statusEl.textContent = `Error: ${err.message}`;
-    topicSelect.innerHTML = <option value="">(Error loading topics)</option>;
-    statusEl.textContent = `Error: ${err.message};`
+    topicSelect.innerHTML = `<option value="">(Error loading topics)</option>`;
   }
 }
 
@@ -85,32 +74,28 @@ function populateTopics(questions) {
 
 function startQuiz() {
   currentTopic = topicSelect.value;
-
   if (!currentTopic) {
-    statusEl.textContent = "Select a topic first.";
+    statusEl.textContent = "Please select a topic first.";
     return;
   }
 
   filteredQuestions = allQuestions.filter(q => q.topic === currentTopic);
-  currentIndex = 0;
-
   if (filteredQuestions.length === 0) {
     statusEl.textContent = "No questions found for this topic.";
     return;
   }
 
+  currentIndex = 0;
   questionCard.classList.remove("hidden");
-  feedbackBox.classList.add("hidden");
-  statusEl.textContent = `Topic: ${currentTopic} (${filteredQuestions.length} questions)`;
-
   nextBtn.disabled = filteredQuestions.length <= 1;
-  submitBtn.disabled = false;
 
   showQuestion();
 }
 
 function showQuestion() {
   hasSubmitted = false;
+  submitBtn.disabled = true;
+
   feedbackBox.classList.add("hidden");
   feedbackBox.classList.remove("correct", "wrong");
 
@@ -118,7 +103,6 @@ function showQuestion() {
   questionText.textContent = q.question;
 
   optionsForm.innerHTML = "";
-
   q.options.forEach((optText, idx) => {
     const label = document.createElement("label");
     label.className = "option";
@@ -128,7 +112,6 @@ function showQuestion() {
     radio.name = "option";
     radio.value = String(idx);
 
-    // enable submit only after choosing
     radio.addEventListener("change", () => {
       if (!hasSubmitted) submitBtn.disabled = false;
     });
@@ -141,10 +124,7 @@ function showQuestion() {
     optionsForm.appendChild(label);
   });
 
-  // disable submit until user selects (but keep enabled if they already know)
-  submitBtn.disabled = true;
-
-  statusEl.textContent = `Question ${currentIndex + 1} of ${filteredQuestions.length}`;
+  statusEl.textContent = `Topic: ${currentTopic} — Question ${currentIndex + 1} of ${filteredQuestions.length}`;
 }
 
 function getSelectedIndex() {
@@ -165,23 +145,23 @@ function submitAnswer() {
   const correct = selectedIndex === q.answerIndex;
 
   hasSubmitted = true;
+  submitBtn.disabled = true;
+
   feedbackBox.classList.remove("hidden");
   feedbackBox.classList.add(correct ? "correct" : "wrong");
 
   feedbackText.textContent = correct ? "Correct ✅" : "Wrong ❌";
   explanationText.textContent = q.explanation || "(No explanation provided)";
 
-  // after submitting, allow next
   nextBtn.disabled = currentIndex >= filteredQuestions.length - 1;
-  submitBtn.disabled = true;
 }
 
 function nextQuestion() {
   if (currentIndex < filteredQuestions.length - 1) {
-    currentIndex += 1;
+    currentIndex++;
     showQuestion();
   } else {
-    statusEl.textContent = "End of questions for this topic.";
+    statusEl.textContent = "End of topic questions.";
     nextBtn.disabled = true;
   }
 }
@@ -198,5 +178,5 @@ function resetQuiz() {
   submitBtn.disabled = true;
   nextBtn.disabled = true;
 
-  statusEl.textContent = "Pick a topic and press Start.";
+  statusEl.textContent = "Select a topic to begin.";
 }

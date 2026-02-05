@@ -10,7 +10,7 @@
   <div class="container">
     <header>
       <h1>DevOps Quiz</h1>
-      <p class="subtitle">Select a topic, answer questions, and get instant feedback.</p>
+      <p class="subtitle">Choose a topic, answer questions, and get instant feedback.</p>
     </header>
 
     <section class="panel">
@@ -22,20 +22,19 @@
       <div class="controls">
         <button id="startBtn" type="button">Start</button>
         <button id="nextBtn" type="button" disabled>Next Question</button>
+        <button id="resetBtn" type="button">Reset</button>
       </div>
+
+      <div id="status" class="status">Loading…</div>
     </section>
 
     <main class="panel">
-      <div id="status" class="status">Pick a topic and press Start.</div>
-
-      <div id="questionCard" class="question-card hidden">
+      <div id="questionCard" class="hidden">
         <h2 id="questionText"></h2>
-
         <form id="optionsForm" class="options"></form>
 
         <div class="controls">
           <button id="submitBtn" type="button" disabled>Submit Answer</button>
-          <button id="resetBtn" type="button">Reset</button>
         </div>
 
         <div id="feedbackBox" class="feedback hidden">
@@ -44,10 +43,6 @@
         </div>
       </div>
     </main>
-
-    <footer>
-      <small>Static app (no backend). Built for DVCS practice.</small>
-    </footer>
   </div>
 
   <script src="app.js"></script>

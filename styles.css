@@ -14,19 +14,18 @@ body {
 }
 
 header { padding: 10px 0 16px; }
-
 h1 { margin: 0; }
 .subtitle { margin: 6px 0 0; color: #555; }
 
 .panel {
-  background: #fff;
+  background: white;
   border: 1px solid #e2e6ee;
   border-radius: 10px;
   padding: 14px;
   margin-bottom: 14px;
 }
 
-label { display: block; margin-bottom: 6px; font-weight: 600; }
+label { display:block; margin-bottom:6px; font-weight:600; }
 
 select {
   width: 100%;
@@ -36,12 +35,7 @@ select {
   background: #fff;
 }
 
-.controls {
-  display: flex;
-  gap: 10px;
-  margin-top: 12px;
-  flex-wrap: wrap;
-}
+.controls { display:flex; gap:10px; margin-top:12px; flex-wrap:wrap; }
 
 button {
   padding: 10px 12px;
@@ -51,31 +45,25 @@ button {
   cursor: pointer;
 }
 
-button:disabled { cursor: not-allowed; opacity: 0.6; }
+button:disabled { opacity: 0.6; cursor: not-allowed; }
 
 .status {
+  margin-top: 12px;
   padding: 10px;
   border-radius: 8px;
   background: #eef2ff;
   border: 1px solid #d7dcff;
-  margin-bottom: 10px;
 }
 
-.question-card h2 { margin: 0 0 12px; font-size: 18px; }
-
-.options {
-  display: grid;
-  gap: 10px;
-  margin-bottom: 12px;
-}
+.options { display:grid; gap:10px; margin-top: 12px; }
 
 .option {
-  display: flex;
-  gap: 10px;
-  padding: 10px;
-  border: 1px solid #e2e6ee;
-  border-radius: 10px;
-  background: #fafbff;
+  display:flex;
+  gap:10px;
+  padding:10px;
+  border:1px solid #e2e6ee;
+  border-radius:10px;
+  background:#fafbff;
 }
 
 .feedback {
@@ -86,12 +74,8 @@ button:disabled { cursor: not-allowed; opacity: 0.6; }
   background: #f8fafc;
 }
 
-.feedback.correct { border-color: #b7f2c3; background: #ecfff1; }
-.feedback.wrong   { border-color: #ffd0d0; background: #fff0f0; }
+.feedback.correct { border-color:#b7f2c3; background:#ecfff1; }
+.feedback.wrong   { border-color:#ffd0d0; background:#fff0f0; }
 
-.feedback-text { font-weight: 700; margin-bottom: 6px; }
-.explanation { color: #333; }
-
-.hidden { display: none; }
-
-footer { color: #666; text-align: center; padding: 8px 0; }
+.feedback-text { font-weight:700; margin-bottom:6px; }
+.hidden { display:none; }
