@@ -1,4 +1,4 @@
-{
+[{
   "id": "Q1",
   "topic": "Continuous Integration",
   "question": "What is the primary goal of Continuous Integration?",
@@ -10,4 +10,19 @@
   ],
   "answerIndex": 1,
   "explanation": "Continuous Integration aims to detect integration issues early."
+},
+{
+    "id": "Q2",
+    "topic": "Continuous Integration",
+    "question": "Which of the following is a common tool used for Continuous Integration?",
+    "options": [
+        "GitHub Actions",
+        "Docker",
+        "Kubernetes",
+        "Terraform"
+    ],
+    "answerIndex": 0,
+    "explanation": "GitHub Actions is a popular CI tool that allows you to automate workflows."
+
 }
+]
