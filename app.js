@@ -64,6 +64,8 @@ async function loadQuestions() {
   } catch (err) {
     topicSelect.innerHTML = `<option value="">(Error loading topics)</option>`;
     statusEl.textContent = `Error: ${err.message}`;
+    topicSelect.innerHTML = <option value="">(Error loading topics)</option>;
+    statusEl.textContent = `Error: ${err.message};`
   }
 }
 
