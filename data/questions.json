@@ -262,7 +262,7 @@
     "answerIndex": 1,
     "explanation": "Continuous improvement means iterating based on results and feedback."
   }
-[{
+,{
   "id": "Q1",
   "topic": "Continuous Integration",
   "question": "What is the primary goal of Continuous Integration?",
