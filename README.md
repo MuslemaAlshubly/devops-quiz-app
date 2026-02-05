@@ -20,8 +20,6 @@ Each question follows this structure:
   "explanation": "Explanation shown after answering."
 }
 ## Features
-- Topic selection dropdown (UI)
-- Loads questions from JSON using fetch()
-- Shows one question at a time
-- Submit button checks the selected answer
-- Displays feedback and explanation
+- Includes 20+ DevOps questions across 4+ topics
+- Question format documented in README
+- Questions stored in data/questions.json
