@@ -5,6 +5,8 @@
 // - Checks answers
 // - Shows feedback + explanation
 
+
+// this is a comment!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 let allQuestions = [];
 let filteredQuestions = [];
 let currentIndex = 0;
@@ -64,6 +66,8 @@ async function loadQuestions() {
   } catch (err) {
     topicSelect.innerHTML = `<option value="">(Error loading topics)</option>`;
     statusEl.textContent = `Error: ${err.message}`;
+    topicSelect.innerHTML = <option value="">(Error loading topics)</option>;
+    statusEl.textContent = `Error: ${err.message};`
   }
 }
 
