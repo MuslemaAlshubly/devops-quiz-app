@@ -5,6 +5,8 @@
 // - Checks answers
 // - Shows feedback + explanation
 
+
+// this is a comment!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 let allQuestions = [];
 let filteredQuestions = [];
 let currentIndex = 0;
@@ -62,6 +64,8 @@ async function loadQuestions() {
     submitBtn.disabled = true;
     nextBtn.disabled = true;
   } catch (err) {
+    topicSelect.innerHTML = `<option value="">(Error loading topics)</option>`;
+    statusEl.textContent = `Error: ${err.message}`;
     topicSelect.innerHTML = <option value="">(Error loading topics)</option>;
     statusEl.textContent = `Error: ${err.message};`
   }
@@ -70,7 +74,7 @@ async function loadQuestions() {
 function populateTopics(questions) {
   const topics = [...new Set(questions.map(q => q.topic).filter(Boolean))].sort();
 
-  topicSelect.innerHTML = <option value="">-- Select a topic --</option>;
+  topicSelect.innerHTML = `<option value="">-- Select a topic --</option>`;
   for (const t of topics) {
     const opt = document.createElement("option");
     opt.value = t;
