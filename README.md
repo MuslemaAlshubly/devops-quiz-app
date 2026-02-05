@@ -19,4 +19,6 @@ Each question follows this structure:
   "answerIndex": 1,
   "explanation": "Explanation shown after answering."
 }
-
+## Features
+- question bank with 20 questions
+- 4 topics included
