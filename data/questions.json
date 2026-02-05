@@ -1,13 +1,133 @@
-{
-  "id": "Q1",
-  "topic": "Continuous Integration",
-  "question": "What is the primary goal of Continuous Integration?",
-  "options": [
-    "Automatically deploy to production",
-    "Frequently integrate code changes into a shared repository",
-    "Eliminate the need for testing",
-    "Remove the need for branches"
-  ],
-  "answerIndex": 1,
-  "explanation": "Continuous Integration aims to detect integration issues early."
-}
+[
+  {
+    "id": "Q1",
+    "topic": "Continuous Integration",
+    "question": "What is the primary goal of Continuous Integration (CI)?",
+    "options": [
+      "Deploy to production automatically after every change",
+      "Frequently integrate code changes into a shared repository",
+      "Eliminate the need for testing",
+      "Avoid using version control"
+    ],
+    "answerIndex": 1,
+    "explanation": "CI focuses on integrating changes often to detect issues early."
+  },
+  {
+    "id": "Q2",
+    "topic": "Continuous Integration",
+    "question": "Which practice best supports CI?",
+    "options": [
+      "Long-lived feature branches without merges",
+      "Frequent small commits with automated builds",
+      "Only testing at the end of the sprint",
+      "Manually copying code to servers"
+    ],
+    "answerIndex": 1,
+    "explanation": "Small, frequent commits plus automated builds/tests support CI."
+  },
+  {
+    "id": "Q3",
+    "topic": "Continuous Integration",
+    "question": "What is a common output of a CI pipeline?",
+    "options": [
+      "A compiled build artifact",
+      "A company budget report",
+      "A production database backup only",
+      "A random password list"
+    ],
+    "answerIndex": 0,
+    "explanation": "CI often produces build artifacts after compiling and testing."
+  },
+  {
+    "id": "Q4",
+    "topic": "Continuous Integration",
+    "question": "Why are automated tests important in CI?",
+    "options": [
+      "They replace all documentation",
+      "They help detect regressions quickly",
+      "They guarantee zero bugs forever",
+      "They remove the need for code review"
+    ],
+    "answerIndex": 1,
+    "explanation": "Automated tests catch regressions early when code changes are integrated."
+  },
+  {
+    "id": "Q5",
+    "topic": "Continuous Integration",
+    "question": "Which tool category is most associated with CI?",
+    "options": [
+      "CI server / pipeline runner",
+      "Spreadsheet editor",
+      "Video streaming platform",
+      "Photo filter app"
+    ],
+    "answerIndex": 0,
+    "explanation": "CI is commonly implemented using a CI server/pipeline runner."
+  },
+
+  {
+    "id": "Q6",
+    "topic": "Version Control Systems",
+    "question": "What is the main benefit of using Git in a team?",
+    "options": [
+      "It replaces the need for any communication",
+      "It tracks changes and supports collaboration",
+      "It automatically writes code for you",
+      "It prevents any merge conflicts from happening"
+    ],
+    "answerIndex": 1,
+    "explanation": "Git tracks history and enables teamwork through branches and merges."
+  },
+  {
+    "id": "Q7",
+    "topic": "Version Control Systems",
+    "question": "What does a branch represent in Git?",
+    "options": [
+      "A separate line of development",
+      "A final release only",
+      "A password for the repository",
+      "A deleted version of the project"
+    ],
+    "answerIndex": 0,
+    "explanation": "A branch lets you develop features independently from main."
+  },
+  {
+    "id": "Q8",
+    "topic": "Version Control Systems",
+    "question": "What is the purpose of a Pull Request (PR)?",
+    "options": [
+      "To delete the main branch",
+      "To propose changes for review and merging",
+      "To prevent anyone from cloning",
+      "To rename all files automatically"
+    ],
+    "answerIndex": 1,
+    "explanation": "A PR is used to review changes before merging into main."
+  },
+  {
+    "id": "Q9",
+    "topic": "Version Control Systems",
+    "question": "Which command gets the latest changes from remote and merges them locally?",
+    "options": [
+      "git pull",
+      "git push",
+      "git init",
+      "git status"
+    ],
+    "answerIndex": 0,
+    "explanation": "git pull fetches from remote and merges into your current branch."
+  },
+  {
+    "id": "Q10",
+    "topic": "Version Control Systems",
+    "question": "What usually causes a merge conflict?",
+    "options": [
+      "Two people edit the same lines differently",
+      "No one commits anything",
+      "You only read files",
+      "Your computer is too fast"
+    ],
+    "answerIndex": 0,
+    "explanation": "Conflicts occur when Git cannot automatically combine changes."
+  }
+]
