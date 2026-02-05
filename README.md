@@ -19,4 +19,9 @@ Each question follows this structure:
   "answerIndex": 1,
   "explanation": "Explanation shown after answering."
 }
-
+## Features
+- Topic selection dropdown (UI)
+- Loads questions from JSON using fetch()
+- Shows one question at a time
+- Submit button checks the selected answer
+- Displays feedback and explanation
