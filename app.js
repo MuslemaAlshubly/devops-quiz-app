@@ -42,7 +42,7 @@ function wireEvents() {
   topicSelect.addEventListener("change", () => {
     currentTopic = topicSelect.value;
     statusEl.textContent = currentTopic
-      ? Topic selected: ${currentTopic}. Press Start.
+      ? `Topic selected: ${currentTopic}. Press Start.`
       : "Pick a topic and press Start.";
   });
 }
@@ -62,15 +62,15 @@ async function loadQuestions() {
     submitBtn.disabled = true;
     nextBtn.disabled = true;
   } catch (err) {
-    topicSelect.innerHTML = <option value="">(Error loading topics)</option>;
-    statusEl.textContent = Error: ${err.message};
+    topicSelect.innerHTML = `<option value="">(Error loading topics)</option>`;
+    statusEl.textContent = `Error: ${err.message}`;
   }
 }
 
 function populateTopics(questions) {
   const topics = [...new Set(questions.map(q => q.topic).filter(Boolean))].sort();
 
-  topicSelect.innerHTML = <option value="">-- Select a topic --</option>;
+  topicSelect.innerHTML = `<option value="">-- Select a topic --</option>`;
   for (const t of topics) {
     const opt = document.createElement("option");
     opt.value = t;
@@ -97,7 +97,7 @@ function startQuiz() {
 
   questionCard.classList.remove("hidden");
   feedbackBox.classList.add("hidden");
-  statusEl.textContent = Topic: ${currentTopic} (${filteredQuestions.length} questions);
+  statusEl.textContent = `Topic: ${currentTopic} (${filteredQuestions.length} questions)`;
 
   nextBtn.disabled = filteredQuestions.length <= 1;
   submitBtn.disabled = false;
@@ -140,7 +140,7 @@ function showQuestion() {
   // disable submit until user selects (but keep enabled if they already know)
   submitBtn.disabled = true;
 
-  statusEl.textContent = Question ${currentIndex + 1} of ${filteredQuestions.length};
+  statusEl.textContent = `Question ${currentIndex + 1} of ${filteredQuestions.length}`;
 }
 
 function getSelectedIndex() {
