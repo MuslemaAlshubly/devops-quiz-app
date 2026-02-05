@@ -5,6 +5,8 @@
 // - Checks answers
 // - Shows feedback + explanation
 
+
+// this is a comment!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 let allQuestions = [];
 let filteredQuestions = [];
 let currentIndex = 0;
