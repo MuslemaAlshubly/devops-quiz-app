@@ -262,4 +262,31 @@
     "answerIndex": 1,
     "explanation": "Continuous improvement means iterating based on results and feedback."
   }
+[{
+  "id": "Q1",
+  "topic": "Continuous Integration",
+  "question": "What is the primary goal of Continuous Integration?",
+  "options": [
+    "Automatically deploy to production",
+    "Frequently integrate code changes into a shared repository",
+    "Eliminate the need for testing",
+    "Remove the need for branches"
+  ],
+  "answerIndex": 1,
+  "explanation": "Continuous Integration aims to detect integration issues early."
+},
+{
+    "id": "Q2",
+    "topic": "Continuous Integration",
+    "question": "Which of the following is a common tool used for Continuous Integration?",
+    "options": [
+        "GitHub Actions",
+        "Docker",
+        "Kubernetes",
+        "Terraform"
+    ],
+    "answerIndex": 0,
+    "explanation": "GitHub Actions is a popular CI tool that allows you to automate workflows."
+
+}
 ]
